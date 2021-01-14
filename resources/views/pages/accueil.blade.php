@@ -1,11 +1,10 @@
-@extends('app')
+@extends('layouts.app')
 
 @section('title')
     Accueil
 @endsection
 
 @section('content')
-    <h1>c'est l'accueil</h1>
     <a href="/admin">Panel admin</a>
 
     <div class="flex flex-col justify-center items-center max-w-sm mx-auto">

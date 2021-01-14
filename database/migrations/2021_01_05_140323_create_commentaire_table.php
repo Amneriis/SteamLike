@@ -15,7 +15,14 @@ class CreateCommentaireTable extends Migration
     {
         Schema::create('commentaire', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
+            $table->string('commentaire');
+            $table->foreignId('id_jeu');
+            $table->foreign('id_jeu')->references('id')->on('jeu')->onDelete('restrict')
+                ->onUpdate('restrict');
+
+            $table->foreignId('id_users');
+            $table->foreign('id_users')->references('id')->on('users')->onDelete('restrict')
+                ->onUpdate('restrict');
         });
     }
 
