@@ -51,10 +51,6 @@
                                 </span>
                             @enderror
                         </div>
-
-                        <div class="col-md-6">
-                            <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password">
-                        </div>
                         
                         <div class="mt-4 w-full">
                             <button type="submit" class="py-2 px-4 bg-gray-700 text-white rounded hover:bg-gray-600 focus:outline-none">
