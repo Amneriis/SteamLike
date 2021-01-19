@@ -18,13 +18,13 @@ class CreateTransactionsTable extends Migration
             $table->integer('montant');
             $table->dateTime('transaction_date');
             $table->enum("status", ['en cours', 'réussi', 'echouer'])->default('en cours');
-            $table->foreignId('user_id');
+            $table->foreignId('id_user');
             $table->foreignId('id_jeu');
             $table->timestamps();
 
             $table->foreign('id_jeu')->references('id')->on('jeu')->onDelete('restrict')
                 ->onUpdate('restrict');
-            $table->foreign('user_id')->references('id')->on('users')->onDelete('restrict')
+            $table->foreign('id_user')->references('id')->on('users')->onDelete('restrict')
                 ->onUpdate('restrict');
         });
     }
