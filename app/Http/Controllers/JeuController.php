@@ -14,7 +14,8 @@ class JeuController extends Controller
      */
     public function index()
     {
-        //
+        $jeux = Jeu::all();
+        return view('admin.jeu.index', compact('jeux'));
     }
 
     /**
@@ -24,7 +25,7 @@ class JeuController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.jeu.create');
     }
 
     /**
@@ -49,6 +50,7 @@ class JeuController extends Controller
         ]);
 
         $jeu->save();
+        return redirect()->route('jeu.index');
 
     }
 
@@ -71,7 +73,8 @@ class JeuController extends Controller
      */
     public function edit($id)
     {
-        //
+        $jeu = Jeu::find($id);
+        return view('admin.jeu.edit', compact('jeu'));
     }
 
     /**
@@ -83,7 +86,10 @@ class JeuController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $jeu = Jeu::find($id);
+        $jeu->nom_jeu = $request->get('nom_jeu');
+        $jeu->save();
+        return redirect()->route('jeu.index');
     }
 
     /**
@@ -97,5 +103,6 @@ class JeuController extends Controller
         //
         $jeu = Jeu::find($id);
         $jeu->delete();
+        return redirect()->route('jeu.index');
     }
 }

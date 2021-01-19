@@ -24,3 +24,10 @@ Auth::routes();
 
 //Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('accueil');
+
+//CRUD JEU
+Route::get('admin/jeu', [JeuController::class, 'index'])->middleware('admin')->name("jeu.index");
+Route::get('admin/jeu/create', [JeuController::class, 'create'])->middleware('admin')->name("jeu.create");
+Route::get('admin/jeu/{id}/edit', [JeuController::class, 'edit'])->middleware('admin')->name("jeu.edit");
+Route::put('admin/jeu/{id}/update', [JeuController::class, 'update'])->middleware('admin')->name("jeu.update");
+Route::get('admin/jeu/{id}/delete', [JeuController::class, 'destroy'])->middleware('admin')->name("jeu.destroy");
