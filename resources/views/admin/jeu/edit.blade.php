@@ -8,13 +8,17 @@
 <div class="flex items-center h-screen w-full bg-teal-lighter">
     <div class="w-full bg-white rounded shadow-lg p-8 m-4 md:max-w-sm md:mx-auto">
         <h3 class="block w-full text-center text-gray-600 mb-6">Modifier un jeu</h3>
-        <form action={{ route('jeu.update',['id'=>$jeu->id]) }} class="mb-4 md:flex md:flex-wrap md:justify-between"
+        <form action={{ route('jeu.update',['id'=>$jeux->id]) }} class="mb-4 md:flex md:flex-wrap md:justify-between"
             method="post">
             @csrf
             @method('PUT')
             <div class="flex flex-col mb-4">
                 <label class="field-label" for="nom_equipe">Nom du Jeu</label>
-                <input type="text" id="nom-form" name="nom_equipe" placeholder="nomEquipe" value="{{$jeu->nom_jeu}}">
+                <input type="text" id="nom-form" name="nom_jeu" placeholder="nomJeu" value="{{$jeux->nom_jeu}}">
+            </div>
+            <div class="field-group mb-4 md:w-1/2">
+                <label class="mb-2 uppercase font-bold text-lg text-gray-600" for="prix">Prix du Jeu</label>
+                <input type="text" id="prix-form" name="prix" placeholder="Prix du jeu">
             </div>
 
             <button class="block bg-blue-700 hover:bg-blue-500 text-white uppercase text-lg mx-auto p-4 rounded"

@@ -15,10 +15,12 @@
                 <label class="mb-2 uppercase font-bold text-lg text-gray-600" for="nom_jeu">Nom du Jeu</label>
                 <input type="text" id="nom-form" name="nom_jeu" placeholder="Nom du jeu">
             </div>
+            <div class="field-group mb-4 md:w-1/2">
+                <label class="mb-2 uppercase font-bold text-lg text-gray-600" for="prix">Prix du Jeu</label>
+                <input type="text" id="prix-form" name="prix" placeholder="Prix du jeu">
+            </div>
 
-            <button class="block bg-blue-700 hover:bg-blue-500 text-white uppercase text-lg mx-auto p-4 rounded"
-                type="submit">Ajouter</button>
-
+            <button class="block bg-blue-700 hover:bg-blue-500 text-white uppercase text-lg mx-auto p-4 rounded" type="submit">Ajouter</button>
         </form>
     </div>
 </div>

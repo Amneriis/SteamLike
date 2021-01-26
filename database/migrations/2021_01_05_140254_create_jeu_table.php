@@ -18,7 +18,9 @@ class CreateJeuTable extends Migration
             $table->string('nom_jeu')->unique();
             $table->string('urlAvatar')->default('user.jpg');
             $table->string('description');
-            $table->float('prix', 3, 2);
+            $table->float('prix');
+            $table->timestamp('updated_at')->useCurrent();
+            $table->timestamp('created_at')->useCurrent();
         });
     }
 

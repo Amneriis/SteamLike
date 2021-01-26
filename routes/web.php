@@ -37,7 +37,8 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 //CRUD JEU
 Route::get('admin/jeu', [JeuController::class, 'index'])->name("jeu.index");
 Route::get('admin/jeu/create', [JeuController::class, 'create'])->name("jeu.create");
-Route::get('admin/jeu/store', [JeuController::class, 'store'])->name("jeu.store");
+Route::post('admin/jeu/store', [JeuController::class, 'store'])->name("jeu.store");
 Route::get('admin/jeu/{id}/edit', [JeuController::class, 'edit'])->name("jeu.edit");
 Route::put('admin/jeu/{id}/update', [JeuController::class, 'update'])->name("jeu.update");
 Route::get('admin/jeu/{id}/delete', [JeuController::class, 'destroy'])->name("jeu.destroy");
+
