@@ -19,6 +19,28 @@
             </div>
         </div>
     </div>
+
+    <div class="flex justify-center items-center mt-5">
+        <a href="#" class="mx-1 px-3 py-2 bg-red-100 dark:bg-gray-800 text-gray-500 dark:text-gray-600 rounded-md cursor-not-allowed">
+            Précédent
+        </a>
+
+        <a href="#" class="mx-1 px-3 py-2 bg-red-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 hover:bg-indigo-600 dark:hover:bg-indigo-500 hover:text-white dark:hover:text-gray-200 rounded-md">
+            1
+        </a>
+
+        <a href="#" class="mx-1 px-3 py-2 bg-red-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 hover:bg-indigo-600 dark:hover:bg-indigo-500 hover:text-white dark:hover:text-gray-200 rounded-md">
+            2
+        </a>
+
+        <a href="#" class="mx-1 px-3 py-2 bg-red-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 hover:bg-indigo-600 dark:hover:bg-indigo-500 hover:text-white dark:hover:text-gray-200 rounded-md">
+            3
+        </a>
+
+        <a href="#" class="mx-1 px-3 py-2 bg-red-100 dark:bg-gray-800 text-gray-700 dark:text-gray-200 hover:bg-indigo-600 dark:hover:bg-indigo-500 hover:text-white dark:hover:text-gray-200 rounded-md">
+            Suivant
+        </a>
+    </div>
 @endsection
         
 
