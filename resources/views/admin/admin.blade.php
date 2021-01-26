@@ -12,13 +12,6 @@
               <div class="p-2 mr-1 rounded-t w-24 bg-blue-600 hover:">
                     <a href="{{route('jeu.index')}}">Jeu</a>
                 </div>
-                 {{--  
-                <div class="p-2 mr-1 w-24 rounded-t bg-blue-600">
-                    <a href="{{route('equipe.index')}}">Equipe</a>
-                </div>
-                <div class="p-2 mr-1 w-24 rounded-t bg-blue-600">
-                    <a href="{{route('bet.index')}}">Paris</a>
-                </div> --}}
             </nav>
             <div class="bg-white w-full mx-auto flex flex-col items-center text-center p-2 rounded">
                 {{-- @yield('user')

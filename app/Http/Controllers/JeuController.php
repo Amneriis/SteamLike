@@ -58,7 +58,7 @@ class JeuController extends Controller
      * Display the specified resource.
      *
      * @param  int  $id
-     * @return \Illuminate\Http\Response
+     * @return \\Http\Response
      */
     public function show($id)
     {
