@@ -26,6 +26,10 @@
                     </div>
                 </div>
     
+                <form action={{ route('jeu.search') }} method="get">
+                    <input type="search" id="site-search" name="search" placeholder="Recherche">
+                    <button href="" type="submit">Go</button>
+                </form>
                 <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
                 <div class="md:flex items-center">
                     <div class="flex flex-col md:flex-row md:mx-6">
