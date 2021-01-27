@@ -25,7 +25,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $jeux = Jeu::all()->take(5);
+        $jeux = Jeu::all()->take(6);
 
         return view('pages/accueil',  compact('jeux'));
     }
