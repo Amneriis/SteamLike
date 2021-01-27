@@ -35,6 +35,10 @@ Route::get('/payementJeu', function(){
     return view('pages/payement');
 });
 
+Route::get('/profil', function(){
+    return view('pages/profil');
+});
+
 Auth::routes();
 
 //Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
