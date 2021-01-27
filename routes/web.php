@@ -24,14 +24,19 @@ Route::get('/admin', function(){
     return view('admin/admin');
 });
 
-Route::get('/acheter-jeu', function(){
+Route::get('/acheterJeu', function(){
     return view('pages/jeu');
 });
+
+Route::get('/payementJeu', function(){
+    return view('pages/payement');
+});
+
 Auth::routes();
 
 //Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('accueil');
-/* Route::get('/acheter-jeu', [App\Http\Controllers\AcheterJeuController::class, 'index'])->name('acheter-jeu'); */
+/* Route::get('/acheter-jeu', [App\Http\Controllers\AcheterJeuController::class, 'index'])->name('acheterJeu'); */
 
 
 //CRUD JEU

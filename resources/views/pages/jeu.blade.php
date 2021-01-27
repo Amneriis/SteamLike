@@ -17,7 +17,7 @@
             </div>
             
             <div>
-                <button>Acheter</button>
+                <a class="bg-gray-800 text-xs text-white px-2 py-1 font-semibold rounded uppercase hover:bg-gray-700 dark:hover:bg-gray-600 focus:bg-gray-700 dark:focus:bg-gray-600 focus:outline-none" href="/payementJeu">Acheter</a>
             </div>
         </div>
     </div>
