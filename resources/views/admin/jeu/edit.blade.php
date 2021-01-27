@@ -8,8 +8,7 @@
 <div class="flex items-center h-screen w-full bg-teal-lighter">
     <div class="w-full bg-white rounded shadow-lg p-8 m-4 md:max-w-sm md:mx-auto">
         <h3 class="block w-full text-center text-gray-600 mb-6">Modifier un jeu</h3>
-        <form action={{ route('jeu.update',['id'=>$jeux->id]) }} class="mb-4 md:flex md:flex-wrap md:justify-between"
-            method="post">
+        <form action={{ route('jeu.update',['id'=>$jeux->id]) }} class="mb-4 md:flex md:flex-wrap md:justify-between" method="post">
             @csrf
             @method('PUT')
             <div class="flex flex-col mb-4">

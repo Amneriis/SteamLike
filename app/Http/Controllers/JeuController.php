@@ -37,6 +37,7 @@ class JeuController extends Controller
     public function store(Request $request)
     {
         //
+        dd($request);
         $request->validate([
             'nom_jeu'=>'required',
             'prix'=>'required'

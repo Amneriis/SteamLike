@@ -13,11 +13,11 @@
             @method('POST')
             <div class="field-group mb-4 md:w-1/2 m-0 m-auto ">
                 <label class="mb-2 uppercase font-bold text-lg text-gray-600" for="nom_jeu">Nom du Jeu :</label>
-                <input type="text" id="nom-form" name="nom_jeu" class="bg-gray-100 p-2 rounded border-2" placeholder="Nom du jeu">
+                <input type="text" id="nom-form" name="nom_jeu" class="bg-gray-100 p-2 rounded border-2" placeholder="Nom du jeu" required>
             </div>
             <div class="field-group mb-4 md:w-1/2 m-0 m-auto">
                 <label class="mb-2 uppercase font-bold text-lg text-gray-600" for="prix">Prix du Jeu :</label>
-                <input type="text" id="prix-form" name="prix" class="bg-gray-100 p-2 rounded border-2" placeholder="Prix du jeu">
+                <input type="text" id="prix-form" name="prix" class="bg-gray-100 p-2 rounded border-2" placeholder="Prix du jeu" required>
             </div>
             <div class="field-group mb-4 md:w-1/2 m-0 m-auto">
                 <label class="mb-2 uppercase font-bold text-lg text-gray-600" for="prix">URL Image :</label>
