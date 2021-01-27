@@ -4,14 +4,20 @@
     Accueil
 @endsection
 
+@section('extra-meta')
+<meta name="csrf-token" content="{{ csrf_token() }}">
+@endsection
+
 @section('content')
     <div class="w-8/12">
         <a>NOM : {{$jeux->nom_jeu}} || PRIX : {{$jeux->prix}}€</a>
     </div>
     <form action={{ route('transactions.store') }} method="post">
-    <input type="hidden" name="id_jeu" value="{{$jeux->id}}">
-    <input type="hidden" name="prix" value="{{$jeux->prix}}">
-    <input type="hidden" name="id_user" value="{{Auth::id()}}">
+    @csrf
+    @method('POST')
+    <input type="" name="id_jeu" value="{{$jeux->id}}">
+    <input type="" name="prix" value="{{$jeux->prix}}">
+    <input type="" name="id_user" value="{{Auth::id()}}">
         <div>
             <label for="">Numéro de carte :</label>
             <input type="text" name="numCarte" placeholder="Numéro de carte" required class="rounded-lg">

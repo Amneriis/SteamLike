@@ -76,11 +76,7 @@
                 </div>
             </nav>
             <div class="bg-white w-full mx-auto flex flex-col items-center text-center p-2 rounded">
-                {{-- @yield('user')
-                @yield('equipe')
-                @yield('bet') --}}
-                @yield('jeu')
-                
+                @yield('jeu')   
             </div>
         </div>
 

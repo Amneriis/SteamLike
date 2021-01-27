@@ -5,7 +5,6 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Transactions;
 
-
 class TransactionsController extends Controller
 {
     //
@@ -38,15 +37,14 @@ class TransactionsController extends Controller
     public function store(Request $request)
     {
         //
-
         $transaction = new Transactions([
             'montant'=>$request->get('prix'),
             'id_user'=>$request->get('id_user'),
-            'id_jeu'=>$request->get('id_jeu'),
+            'id_jeu'=>$request->get('id_jeu')
         ]);
 
         $transaction->save();
-        return redirect()->route('pages.accueil');
+        return redirect()->route('accueil');
 
     }
 
@@ -58,8 +56,7 @@ class TransactionsController extends Controller
      */
     public function show($id)
     {
-        $jeux = Jeu::find($id);
-        return view('pages.jeu', compact('jeux'));
+   
     }
 
     /**
@@ -70,8 +67,7 @@ class TransactionsController extends Controller
      */
     public function edit($id)
     {
-        $jeux = Jeu::find($id);
-        return view('admin.jeu.edit', compact('jeux'));
+
     }
 
     /**
@@ -83,11 +79,7 @@ class TransactionsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $jeux = Jeu::find($id);
-        $jeux->nom_jeu = $request->get('nom_jeu');
-        $jeux->prix = $request->get('prix');
-        $jeux->save();
-        return redirect()->route('jeu.index');
+
     }
 
     /**
@@ -99,25 +91,7 @@ class TransactionsController extends Controller
     public function destroy($id)
     {
         //
-        $jeux = Jeu::find($id);
-        $jeux->delete();
-        return redirect()->route('jeu.index');
+ 
     }
 
-    public function search(Request $request)
-    {
-        $name = $request->get('search');
-        if($name != ""){
-            $jeux = Jeu::where('nom_jeu', 'LIKE', "%$name%")->get();
-            return view('pages.recherche', compact('jeux'));
-        } else {
-            return view('pages.accueil');
-        }
-    }
-
-    public function pay($id)
-    {
-        $jeux = Jeu::find($id);
-        return view('pages.payement', compact('jeux'));
-    }
 }
