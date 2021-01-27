@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Transaction;
+use App\Models\Transactions;
 
 
-class TransactionController extends Controller
+class TransactionsController extends Controller
 {
     //
        /**
@@ -39,7 +39,7 @@ class TransactionController extends Controller
     {
         //
 
-        $transaction = new Transaction([
+        $transaction = new Transactions([
             'montant'=>$request->get('prix'),
             'id_user'=>$request->get('id_user'),
             'id_jeu'=>$request->get('id_jeu'),
