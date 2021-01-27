@@ -50,3 +50,5 @@ Route::get('pages/recherche', [JeuController::class, 'search'])->name("jeu.searc
 Route::get('pages/{id}/payement', [JeuController::class, 'pay'])->name("jeu.pay");
 Route::get('pages/{id}/jeu', [JeuController::class, 'show'])->name("jeu.show");
 
+//CRUD TRANSACTION
+Route::post('payement', [TransactionController::class, 'store'])->name("transaction.store");

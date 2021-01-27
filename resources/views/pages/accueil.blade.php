@@ -16,7 +16,7 @@
             <div class="flex items-center justify-between py-2 px-3 bg-gray-200 dark:bg-gray-700">
                 <span class="text-gray-800 dark:text-gray-200 font-bold">70€</span>
                 <a class="bg-gray-800 text-xs text-white px-2 py-1 font-semibold rounded uppercase hover:bg-gray-700 dark:hover:bg-gray-600 focus:bg-gray-700 dark:focus:bg-gray-600 focus:outline-none">Acheter</a>
-                <!-- à rajouter au dessus plus tard => href="{{ route('jeu.show',['id'=>$jeu->id]) }}" -->
+                <!-- à rajouter au dessus plus tard => href="{ { route('jeu.show',['id'=>$jeu->id]) }}" -->
             </div>
         </div>
     </div>

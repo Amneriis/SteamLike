@@ -8,7 +8,10 @@
     <div class="w-8/12">
         <a>NOM : {{$jeux->nom_jeu}} || PRIX : {{$jeux->prix}}€</a>
     </div>
-    <form action="" method="get">
+    <form action={{ route('transaction.store') }} method="post">
+    <input type="hidden" name="id_jeu" value="{{$jeux->id}}">
+    <input type="hidden" name="prix" value="{{$jeux->prix}}">
+    <input type="hidden" name="id_user" value="{{Auth::id()}}">
         <div>
             <label for="">Numéro de carte</label>
             <input type="text" name="numCarte" placeholder="Numéro de carte" required>
