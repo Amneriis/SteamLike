@@ -13,7 +13,7 @@
             <div class="container mx-auto px-6 py-3 md:flex md:justify-between md:items-center">
                 <div class="flex justify-between items-center">
                     <div>
-                        <a class="text-gray-800 dark:text-white text-xl font-bold md:text-2xl hover:text-gray-700 dark:hover:text-gray-300" href="#">SteamLike</a>
+                        <a class="text-gray-800 dark:text-white text-xl font-bold md:text-2xl hover:text-gray-700 dark:hover:text-gray-300" href="/home">SteamLike</a>
                     </div>
                     
                     <!-- Mobile menu button -->
@@ -28,7 +28,7 @@
     
                 <form action={{ route('jeu.search') }} method="get">
                     <input type="search" id="site-search" name="search" placeholder="Recherche">
-                    <button href="" type="submit">Go</button>
+                    <button href="/home" type="submit">Go</button>
                 </form>
                 <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
                 <div class="md:flex items-center">
