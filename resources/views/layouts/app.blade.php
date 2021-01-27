@@ -26,10 +26,15 @@
                     </div>
                 </div>
     
-                <form action={{ route('jeu.search') }} method="get">
-                    <input type="search" id="site-search" name="search" placeholder="Recherche">
-                    <button href="/home" type="submit">Go</button>
-                </form>
+                 <!-- Barre de recherche -->
+                <div class="relative bg-gray-100 p-2 rounded border-2 ">
+                    <form action={{ route('jeu.search') }} method="get">
+                        <input type="search" id="site-search" name="search" placeholder="Recherche" class="ml-8 bg-transparent">
+                        <button href="/home" type="submit">Go</button>
+                    </form>
+                </div>
+                
+
                 <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
                 <div class="md:flex items-center">
                     <div class="flex flex-col md:flex-row md:mx-6">
@@ -69,7 +74,7 @@
          @yield('content')
     </body>
 
-    <footer>
-        <p>&copy; Copyright {{ date('Y')}}</p>
+    <footer class="shadow-inner mt-5">
+            <p class="text-center">SteamLike est un projet étudiant. Il ne permet en aucun cas d'acheter réellement un jeu. &copy; Copyright {{ date('Y')}}</p>
     </footer>
 </html>
