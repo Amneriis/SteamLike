@@ -5,6 +5,9 @@
 @endsection
 
 @section('content')
+    <div class="w-8/12">
+        <a>NOM : {{$jeux->nom_jeu}} || PRIX : {{$jeux->prix}}€</a>
+    </div>
     <form action="" method="get">
         <div>
             <label for="">Numéro de carte</label>

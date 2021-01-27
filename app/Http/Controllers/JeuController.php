@@ -62,7 +62,8 @@ class JeuController extends Controller
      */
     public function show($id)
     {
-        //
+        $jeux = Jeu::find($id);
+        return view('pages.jeu', compact('jeux'));
     }
 
     /**
@@ -116,5 +117,11 @@ class JeuController extends Controller
         } else {
             return view('pages.accueil');
         }
+    }
+
+    public function pay($id)
+    {
+        $jeux = Jeu::find($id);
+        return view('pages.payement', compact('jeux'));
     }
 }

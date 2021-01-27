@@ -47,3 +47,6 @@ Route::get('admin/jeu/{id}/edit', [JeuController::class, 'edit'])->name("jeu.edi
 Route::put('admin/jeu/{id}/update', [JeuController::class, 'update'])->name("jeu.update");
 Route::get('admin/jeu/{id}/delete', [JeuController::class, 'destroy'])->name("jeu.destroy");
 Route::get('pages/recherche', [JeuController::class, 'search'])->name("jeu.search");
+Route::get('pages/{id}/payement', [JeuController::class, 'pay'])->name("jeu.pay");
+Route::get('pages/{id}/jeu', [JeuController::class, 'show'])->name("jeu.show");
+
