@@ -12,6 +12,7 @@ class Jeu extends Model
     protected $table = 'jeu';
 
     protected $fillable = [
+        'id',
         'nom_jeu',
         'urlAvatar',
         'description',
