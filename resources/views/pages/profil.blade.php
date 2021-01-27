@@ -6,7 +6,7 @@
 
 @section('content')
     <div>
-        <p>Pseudo</p>
+        <p>Bonjour, {{Auth::user()->name}}</p>
         {{-- <img src="" alt="avatar"> --}}
     </div>
     

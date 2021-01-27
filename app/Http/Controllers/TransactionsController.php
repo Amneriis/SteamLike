@@ -6,7 +6,6 @@ use Illuminate\Http\Request;
 use App\Models\Transactions;
 use Auth;
 use App\Models\Jeu;
-use App\Models\TransactionsNom;
 use Illuminate\Support\Facades\DB;
 
 class TransactionsController extends Controller
@@ -100,10 +99,6 @@ class TransactionsController extends Controller
 
     public function showInProfil()
     {
-        /*
-        $transactions = TransactionsNom::where('id_user', Auth::id())->get();
-        dd($transactions);
-        */
         $idUser = Auth::id();
         $transactions = DB::table('transactions')
             ->selectRaw('
@@ -116,7 +111,7 @@ class TransactionsController extends Controller
             ->where('id_user', $idUser)
             ->orderBy('transactions.transaction_date', 'asc')
             ->get();
-        //dd($transactions);
+
         return view('pages.profil', compact('transactions'));
     }
 }

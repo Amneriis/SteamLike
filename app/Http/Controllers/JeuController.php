@@ -125,10 +125,5 @@ class JeuController extends Controller
         $jeux = Jeu::find($id);
         return view('pages.payement', compact('jeux'));
     }
-    /*
-    public function findPrice($id)
-    {
-        $jeux = Jeu::find($id);
-        return $jeux->get('prix');
-    }*/
+    
 }
