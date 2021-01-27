@@ -59,4 +59,5 @@ Route::get('pages/{id}/jeu', [JeuController::class, 'show'])->name("jeu.show");
 
 //CRUD TRANSACTION
 Route::post('pages/payement', [TransactionsController::class, 'store'])->name("transactions.store");
+Route::get('pages/profil', [TransactionsController::class, 'showInProfil'])->name("transactions.showInProfil");
 
