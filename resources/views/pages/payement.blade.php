@@ -4,7 +4,7 @@
     Accueil
 @endsection
 
-@section('payement')
+@section('content')
     <form action="" method="get">
         <div>
             <label for="">Numéro de carte</label>
