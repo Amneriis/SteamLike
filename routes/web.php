@@ -17,10 +17,11 @@ use App\Http\Controllers\AdminController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
+/*
 Route::get('/', function () {
     return view('pages/accueil');
-});
+});*/
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('accueil');
 Route::get('admin', [AdminController::class, 'index'])->middleware("admin");
 /*
 Route::get('/admin', function(){
