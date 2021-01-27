@@ -106,4 +106,15 @@ class JeuController extends Controller
         $jeux->delete();
         return redirect()->route('jeu.index');
     }
+
+    public function search(Request $request)
+    {
+        $name = $request->get('search');
+        if($name != ""){
+            $jeux = Jeu::where('nom_jeu', 'LIKE', "%$name%")->get();
+            return view('pages.recherche', compact('jeux'));
+        } else {
+            return view('pages.accueil');
+        }
+    }
 }

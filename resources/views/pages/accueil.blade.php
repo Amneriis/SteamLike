@@ -6,7 +6,10 @@
 
 @section('content')
     <a href="/admin">Panel admin</a>
-
+    <form action={{ route('jeu.search') }} method="get">
+        <input type="search" id="site-search" name="search" placeholder="Recherche">
+        <button href="" type="submit">Go</button>
+    </form>
     <div class="flex flex-col justify-center items-center max-w-sm mx-auto">
         <div class="bg-gray-300 h-64 w-full rounded-lg shadow-md bg-cover bg-center" style="background-image: url(https://www.psu.com/wp/wp-content/uploads/2019/07/Cyberpunk-2077-1024x576.jpg)"></div>
 

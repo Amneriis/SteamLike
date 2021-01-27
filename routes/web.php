@@ -41,4 +41,4 @@ Route::post('admin/jeu/store', [JeuController::class, 'store'])->name("jeu.store
 Route::get('admin/jeu/{id}/edit', [JeuController::class, 'edit'])->name("jeu.edit");
 Route::put('admin/jeu/{id}/update', [JeuController::class, 'update'])->name("jeu.update");
 Route::get('admin/jeu/{id}/delete', [JeuController::class, 'destroy'])->name("jeu.destroy");
-
+Route::get('pages/recherche', [JeuController::class, 'search'])->name("jeu.search");
