@@ -15,9 +15,7 @@
     <form action={{ route('transactions.store') }} method="post">
     @csrf
     @method('POST')
-    <input type="" name="id_jeu" value="{{$jeux->id}}">
-    <input type="" name="prix" value="{{$jeux->prix}}">
-    <input type="" name="id_user" value="{{Auth::id()}}">
+    <input type="hidden" name="id_jeu" value="{{$jeux->id}}">
         <div>
             <label for="">Numéro de carte :</label>
             <input type="text" name="numCarte" placeholder="Numéro de carte" required class="rounded-lg">

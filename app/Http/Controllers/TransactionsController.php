@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Transactions;
+use Auth;
+use App\Models\Jeu;
 
 class TransactionsController extends Controller
 {
@@ -38,8 +40,8 @@ class TransactionsController extends Controller
     {
         //
         $transaction = new Transactions([
-            'montant'=>$request->get('prix'),
-            'id_user'=>$request->get('id_user'),
+            'montant'=>Jeu::where('id', $request->get('id_jeu'))->get()->first()->prix,
+            'id_user'=>Auth::id(),
             'id_jeu'=>$request->get('id_jeu')
         ]);
 
