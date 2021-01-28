@@ -9,7 +9,7 @@
     <div class="flex flex-col items-center">
         <div>
             <div class="p-8 mt-4 ">
-                <div class=" h-96 w-96 bg-center rounded-lg shadow-md bg-cover" style="background-image: url(https://www.psu.com/wp/wp-content/uploads/2019/07/Cyberpunk-2077-1024x576.jpg)"></div>
+                <div class=" h-96 w-96 bg-center rounded-lg shadow-md bg-cover" style="background-image: url({{$jeux->urlAvatar}})"></div>
             </div>
             <div class="p-4 space-y-2 flex flex-col items-center"> 
                 <h3>{{$jeux->nom_jeu}}</h3>
