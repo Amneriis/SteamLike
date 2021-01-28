@@ -55,10 +55,10 @@ Route::get('admin/jeu/{id}/edit', [JeuController::class, 'edit'])->middleware('a
 Route::put('admin/jeu/{id}/update', [JeuController::class, 'update'])->middleware('admin')->name("jeu.update");
 Route::get('admin/jeu/{id}/delete', [JeuController::class, 'destroy'])->middleware('admin')->name("jeu.destroy");
 Route::get('pages/recherche', [JeuController::class, 'search'])->name("jeu.search");
-Route::get('pages/{id}/payement', [JeuController::class, 'pay'])->name("jeu.pay");
+Route::get('pages/{id}/payement', [JeuController::class, 'pay'])->middleware('userAuth')->name("jeu.pay");
 Route::get('pages/{id}/jeu', [JeuController::class, 'show'])->name("jeu.show");
 
 //CRUD TRANSACTION
-Route::post('pages/payement', [TransactionsController::class, 'store'])->name("transactions.store");
-Route::get('pages/profil', [TransactionsController::class, 'showInProfil'])->name("transactions.showInProfil");
+Route::post('pages/payement', [TransactionsController::class, 'store'])->middleware('userAuth')->name("transactions.store");
+Route::get('pages/profil', [TransactionsController::class, 'showInProfil'])->middleware('userAuth')->name("transactions.showInProfil");
 
