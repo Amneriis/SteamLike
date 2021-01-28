@@ -12,17 +12,15 @@
             @csrf
             @method('PUT')
             <div class="flex flex-col mb-4">
-                <label class="field-label" for="nom_equipe">Nom du Jeu</label>
-                <input type="text" id="nom-form" name="nom_jeu" placeholder="nomJeu" value="{{$jeux->nom_jeu}}">
+                <label class="mb-2 uppercase font-bold text-lg text-gray-600" for="nom_jeu">Nom du Jeu</label>
+                <input type="text" id="nom-form" name="nom_jeu" placeholder="Nom du jeu" value="{{$jeux->nom_jeu}}">
             </div>
-            <div class="field-group mb-4 md:w-1/2">
+            <div class="flex flex-col mb-4">
                 <label class="mb-2 uppercase font-bold text-lg text-gray-600" for="prix">Prix du Jeu</label>
-                <input type="text" id="prix-form" name="prix" placeholder="Prix du jeu">
+                <input type="text" id="prix-form" name="prix" placeholder="Prix du jeu" value="{{$jeux->prix}}">
             </div>
 
-            <button class="block bg-blue-700 hover:bg-blue-500 text-white uppercase text-lg mx-auto p-4 rounded"
-                type="submit">Update</button>
-
+            <button class="block bg-blue-700 hover:bg-blue-500 text-white uppercase text-lg mx-auto p-4 rounded" type="submit">Update</button>
         </form>
         <a class="block w-full text-center no-underline text-sm text-gray-400 hover:text-gray-600"
             href="{{ route('jeu.index') }}"> Liste Jeu</a>
