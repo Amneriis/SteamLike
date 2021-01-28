@@ -5,9 +5,9 @@
 @endsection
 
 @section('content')
-    <a href="/admin">Panel admin</a>
+    <div class=" grid grid-cols-4 md:grid-cols-4 gap-2 mt-8">
     @foreach ($jeux as $jeu)
-    <div class="flex flex-col justify-center items-center max-w-sm mx-auto">
+        <div class="flex flex-col items-center max-w-sm mx-auto">
             <div class="bg-gray-300 h-64 w-full rounded-lg shadow-md bg-cover bg-center" style="background-image: url(https://www.psu.com/wp/wp-content/uploads/2019/07/Cyberpunk-2077-1024x576.jpg)"></div>
 
             <div class="w-56 md:w-64 bg-white dark:bg-gray-800 -mt-10 shadow-lg rounded-lg overflow-hidden">
@@ -20,7 +20,7 @@
             </div>
         </div>
     @endforeach
-
+</div>
     <div class="flex justify-center items-center mt-5">
         <a href="#" class="mx-1 px-3 py-2 bg-red-100 dark:bg-gray-800 text-gray-500 dark:text-gray-600 rounded-md cursor-not-allowed">
             Précédent

@@ -75,7 +75,7 @@
          @yield('content')
     </body>
 
-    <footer class="shadow-inner mt-5">
-            <p class="text-center">SteamLike est un projet étudiant. Il ne permet en aucun cas d'acheter réellement un jeu. &copy; Copyright {{ date('Y')}}</p>
+    <footer class="shadow-inner mt-5 w-screen absolute bottom-0 ">
+            <p class="text-center my-5">SteamLike est un projet étudiant. Il ne permet en aucun cas d'acheter réellement un jeu. &copy; Copyright {{ date('Y')}}</p>
     </footer>
 </html>
