@@ -38,10 +38,16 @@
                 <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
                 <div class="md:flex items-center">
                     <div class="flex flex-col md:flex-row md:mx-6">
-                        <a class="my-1 text-sm text-gray-700 dark:text-gray-200 font-medium hover:text-indigo-500 dark:hover:text-indigo-400 md:mx-4 md:my-0" href="#">Accueil</a>
+                        <a class="my-1 text-sm text-gray-700 dark:text-gray-200 font-medium hover:text-indigo-500 dark:hover:text-indigo-400 md:mx-4 md:my-0" href="{{ route('accueil') }}">Accueil</a>
                     </div>
-
-
+                    @guest 
+                        @if (Route::has('login'))
+                        @endif
+                        @else
+                        <div class="flex flex-col md:flex-row md:mx-6">
+                            <a class="my-1 text-sm text-gray-700 dark:text-gray-200 font-medium hover:text-indigo-500 dark:hover:text-indigo-400 md:mx-4 md:my-0" href="{{ route('transactions.showInProfil') }}">Profil</a>
+                        </div>
+                    @endguest
                     <div class="flex items-center py-2 -mx-1 md:mx-0">
                         @guest
                             @if (Route::has('login'))
