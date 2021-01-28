@@ -9,26 +9,24 @@
         <p>Bonjour, {{Auth::user()->name}}</p>
         {{-- <img src="" alt="avatar"> --}}
     </div>
-    
-    <div>
-        <table>
+        <table class=" mx-64 shadow-lg bg-white w-6/12">
             <thead>Historique de commande</thead>
             <tbody>
                 <tr>
-                    <td>Id commande</td>
-                    <td>Nom du jeu</td>
-                    <td>Prix d'achat</td>
-                    <td>Date d'achat</td>
+                    <th class="bg-blue-100 border text-left px-8 py-4">Id commande</th>
+                    <th class="bg-blue-100 border text-left px-8 py-4">Nom du jeu</th>
+                    <th class="bg-blue-100 border text-left px-8 py-4">Prix d'achat</th>
+                    <th class="bg-blue-100 border text-left px-8 py-4">Date d'achat</th>
                 </tr>
                 @foreach ($transactions as $transaction)
                 <tr>
-                    <td>{{$transaction->id}}</td>
-                    <td>{{$transaction->nom_jeu}}</td>
-                    <td>{{$transaction->montant}}</td>
-                    <td>{{$transaction->created_at}}</td>
+                    <td class="border px-8 py-4">{{$transaction->id}}</td>
+                    <td class="border px-8 py-4">{{$transaction->nom_jeu}}</td>
+                    <td class="border px-8 py-4">{{$transaction->montant}}</td>
+                    <td class="border px-8 py-4">{{$transaction->created_at}}</td>
                 </tr>
                 @endforeach
             </tbody>
         </table>
-    </div>
+
 @endsection
